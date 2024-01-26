@@ -3,12 +3,12 @@ package org.example;
 import java.util.List;
 
 public class Find {
-    public static Double findMatching(List<Double> list, Double lowerLimit, Double upperLimit) {
+    public static Double findMatching(List<Double> list, Double lowerLimit, Double upperLimit) throws Exception {
         for (Double item : list) {
             if (item >= lowerLimit && item <= upperLimit) {
                 return item;
             }
         }
-        return null;
+        throw new Exception();
     }
 }
